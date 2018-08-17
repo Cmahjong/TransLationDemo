@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:dither="true"
+    android:shape="oval">
+
+    <!--gradientRadius 很难理解，**%的形式在三星note机型上表现非常差！
+        使用float值在5.0上的表现非常差！ -->
+    <!-- %意识是相对于自己的尺寸，%p是相对于自己Parent的-->
+    <gradient
+        android:endColor="#6615ff00"
+        android:gradientRadius="65%"
+        android:centerColor="#0040ff"
+        android:startColor="#0040ff"
+        android:type="radial"
+        android:useLevel="false"/>
+
+    <size
+        android:height="100dp"
+        android:width="100dp"/>
+
+</shape>

@@ -1,0 +1,178 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Translation" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowEnterTransition">@transition/translation_enter</item>
+        <item name="android:windowReenterTransition">@transition/translation_exit</item>
+    </style>
+    <!--add 2017.02.20 by xw 提醒设置 style -->
+    <style name="AlarmSetting"/>
+    <!--外层的linear-->
+    <style name="AlarmSetting.LinearOuter">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <!--<item name="android:layout_marginTop">10dp</item>-->
+        <!--<item name="android:background">#1a000000</item>-->
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">18dp</item>
+        <item name="android:paddingBottom">18dp</item>
+    </style>
+
+    <!--内层的linear-->
+    <style name="AlarmSetting.LinearInner">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <!--外层的linear-->
+    <style name="AlarmSetting.LinearDetail">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <!--<item name="android:background">#FFFEFEFE</item>-->
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <!--line-->
+    <style name="AlarmSetting.Line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">#FFEEEEEE</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+    </style>
+
+    <!--text title-->
+    <style name="AlarmSetting.TextTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--text title by fanhl add disable color-->
+    <style name="AlarmSetting.TextTitle2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--text content-->
+    <style name="AlarmSetting.TextContent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#66ffffff</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+    <!--text title-->
+    <style name="AlarmSetting.TextTitle.TextTime">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#7fffffff</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <!--switch-->
+    <style name="AlarmSetting.Switch">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="colorControlActivated">#009BB4</item>
+        <item name="colorSwitchThumbNormal">#A2A6A9</item>
+        <item name="android:colorForeground">@color/black</item>
+    </style>
+
+    <!--switch-->
+    <style name="AlarmSetting.RightArrow">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:src">@drawable/selector_right_arrow</item>
+    </style>
+
+
+    <style name="AlarmSetting.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:background">@drawable/dark_gray_border_radius_bg</item>
+    </style>
+
+    <style name="AlarmSetting.Button2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:background">@drawable/dark_gray_border_bg</item>
+    </style>
+
+    <!--main style-->
+    <style name="Main"/>
+
+    <style name="Main.Divide">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:background">#DDDDDD</item>
+    </style>
+
+    <style name="Main.Divide1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">10dp</item>
+        <item name="android:background">#FFF1F1F1</item>
+    </style>
+
+    <style name="Main.Divide2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">#FFF1F1F1</item>
+    </style>
+
+    <style name="Main.DivideCf">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:background">#0dffffff</item>
+    </style>
+
+    <style name="AppThemeCf.NoActionBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar"/>
+
+    <style name="AppThemeCf.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark"/>
+    <style name="mine_home_text_name">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+</resources>

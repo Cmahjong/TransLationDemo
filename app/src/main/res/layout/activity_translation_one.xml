@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tool_bar"
+        android:transitionName="tv_one"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_community_search"
+                android:orientation="vertical">
+
+                <!--4.1.5 振动报警-->
+                <LinearLayout
+                    style="@style/AlarmSetting.LinearOuter"
+                    android:layout_marginTop="0dp"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        style="@style/AlarmSetting.LinearInner">
+
+                        <TextView
+                            style="@style/AlarmSetting.TextTitle"
+                            android:text="震动报警"/>
+
+                        <TextView
+                            style="@style/AlarmSetting.TextContent"
+                            android:layout_marginTop="3dp"
+                            android:text="您的摩托在静止状态下，发生震动时推送提醒消息"/>
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/alarm_setting_switch_shake"
+                        style="@style/AlarmSetting.Switch"
+                        android:layout_gravity="center_vertical"
+                        app:theme="@style/AlarmSetting.Switch"
+                        tools:checked="true"/>
+                </LinearLayout>
+
+                <View style="@style/Main.DivideCf"/>
+
+                <LinearLayout
+                    android:id="@+id/alarm_setting_linear_shake"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <TextView
+                        android:layout_width="35dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginStart="2dp"
+                        android:text="迟钝"
+                        android:textColor="#ccffffff"
+                        android:textSize="14sp"/>
+
+                    <SeekBar
+                        android:id="@+id/alarm_setting_seek_bar_shake"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:clickable="false"
+                        android:max="100"
+                        android:maxHeight="3dp"
+                        android:progressDrawable="@drawable/alarm_setting_bar_bg"
+                        android:splitTrack="false"
+                        android:thumb="@drawable/icon_switch_button"
+                        tools:progress="50"/>
+
+                    <TextView
+                        android:layout_width="35dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="灵敏"
+                        android:textColor="#ccffffff"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_item_community_search"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/AlarmSetting.LinearOuter">
+
+                    <LinearLayout
+                        style="@style/AlarmSetting.LinearInner">
+
+                        <TextView
+                            style="@style/AlarmSetting.TextTitle"
+                            android:text="异常时间行驶通知"/>
+                    </LinearLayout>
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/alarm_setting_switch_drive_unusual"
+                        style="@style/AlarmSetting.Switch"
+                        app:theme="@style/AlarmSetting.Switch"/>
+                </LinearLayout>
+
+                <View style="@style/Main.DivideCf"/>
+
+                <LinearLayout
+                    android:id="@+id/alarm_setting_linear_drive_unusual"
+                    style="@style/AlarmSetting.LinearOuter"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/alarm_setting_text_drive_unusual"
+                        style="@style/AlarmSetting.TextContent"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="默认：下午11:00至次日上午05:00车辆行驶"/>
+
+                    <ImageView
+                        android:id="@+id/alarm_setting_image_drive_unusual"
+                        style="@style/AlarmSetting.RightArrow"
+                        android:visibility="gone"
+                        tools:visibility="visible"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/AlarmSetting.LinearOuter"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_item_community_search">
+
+                <LinearLayout
+                    style="@style/AlarmSetting.LinearInner">
+
+                    <TextView
+                        style="@style/AlarmSetting.TextTitle"
+                        android:text="原地设防"/>
+
+                    <TextView
+                        style="@style/AlarmSetting.TextContent"
+                        android:layout_marginTop="3dp"
+                        android:text="停车后15分钟自动开启定位防盗功能"/>
+                </LinearLayout>
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/alarm_setting_switch_location_protect"
+                    style="@style/AlarmSetting.Switch"
+                    android:layout_gravity="center_vertical"
+                    app:theme="@style/AlarmSetting.Switch"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/liner_alarm_setting_battery"
+                style="@style/AlarmSetting.LinearOuter"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_item_community_search"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <LinearLayout
+                    style="@style/AlarmSetting.LinearInner">
+
+                    <TextView
+                        style="@style/AlarmSetting.TextTitle"
+                        android:text="电瓶电量预警"/>
+
+                    <TextView
+                        style="@style/AlarmSetting.TextContent"
+                        android:layout_marginTop="5dp"
+                        android:text="电瓶电量不足时的提醒消息"/>
+                </LinearLayout>
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/alarm_setting_switch_battery"
+                    style="@style/AlarmSetting.Switch"
+                    app:theme="@style/AlarmSetting.Switch"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_item_community_search"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/AlarmSetting.LinearOuter">
+
+                    <LinearLayout
+                        style="@style/AlarmSetting.LinearInner">
+
+                        <TextView
+                            style="@style/AlarmSetting.TextTitle"
+                            android:text="疲劳驾驶"/>
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/alarm_setting_switch_tired_driving"
+                        style="@style/AlarmSetting.Switch"
+                        app:theme="@style/AlarmSetting.Switch"/>
+                </LinearLayout>
+
+                <View style="@style/Main.DivideCf"/>
+
+                <LinearLayout
+                    android:id="@+id/alarm_setting_linear_tired_driving"
+                    style="@style/AlarmSetting.LinearOuter"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:id="@+id/alarm_setting_text_tired_driving"
+                        style="@style/AlarmSetting.TextContent"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="默认：4小时连续驾车"/>
+
+                    <ImageView
+                        android:id="@+id/alarm_setting_image_tired_driving"
+                        style="@style/AlarmSetting.RightArrow"
+                        android:visibility="gone"
+                        tools:visibility="visible"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_item_community_search"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/AlarmSetting.LinearOuter">
+
+                    <LinearLayout
+                        style="@style/AlarmSetting.LinearInner">
+
+                        <TextView
+                            style="@style/AlarmSetting.TextTitle"
+                            android:text="限号"/>
+
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/alarm_setting_switch_no_limit"
+                        style="@style/AlarmSetting.Switch"
+                        app:theme="@style/AlarmSetting.Switch"/>
+                </LinearLayout>
+
+                <View style="@style/Main.DivideCf"/>
+
+                <LinearLayout
+                    android:id="@+id/alarm_setting_linear_no_limit"
+                    style="@style/AlarmSetting.LinearOuter"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/alarm_setting_text_no_limit"
+                        style="@style/AlarmSetting.TextContent"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="默认：根据所在城市限号规则提前一天(下午09:00)提醒"/>
+
+                    <ImageView
+                        android:id="@+id/alarm_setting_image_no_limit"
+                        style="@style/AlarmSetting.RightArrow"
+                        android:visibility="gone"
+                        tools:visibility="visible"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

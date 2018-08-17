@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff000000"
+   >
+    <Button
+        android:id="@+id/anim_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="changeScene"
+        android:text="演示1"
+        />
+    <Button
+        android:id="@+id/anim_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/anim_1"
+        android:onClick="changeScene"
+        android:text="演示2"
+        />
+    <Button
+        android:id="@+id/anim_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/anim_2"
+        android:onClick="changeScene"
+        android:text="演示3"
+        />
+    <Button
+        android:id="@+id/anim_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/anim_3"
+        android:onClick="changeScene"
+        android:text="演示4"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/base"
+        android:layout_below="@id/anim_1">
+
+        <include layout="@layout/contet_scene_one"
+            />
+    </RelativeLayout>
+</RelativeLayout>

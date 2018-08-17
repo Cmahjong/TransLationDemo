@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--春风摩托-->
+    <color name="primary_cf">#343846</color>
+    <!--<item name="primary_dark_cf">#343846</item>-->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="primary_dark_cf">@color/primary_cf</color>
+    <color name="accent_cf">#0BDFEA</color>
+    <color name="color_background_cf">#2A2D39</color>
+    <color name="colorPrimaryBgCf">#FF282A33</color>
+    <color name="black">#353535</color>
+</resources>
